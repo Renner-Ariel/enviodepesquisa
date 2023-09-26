@@ -4,7 +4,7 @@ import time
 import pyautogui
 import pyperclip
 
-senha = "1234" #defina sua senha de segurança para que outras pessoas não acessem/usem o programa de forma a enhviar mensagens aleatorias para pessoas aleatorias
+senha = "" #defina sua senha de segurança para que outras pessoas não acessem/usem o programa de forma a enhviar mensagens aleatorias para pessoas aleatorias
 if input("insira a senha  ") == senha:#linhas utilizada para testar se a senha e valida se não for valida retorna a não ativação do codigo e retorna a mensagem da ultima linha
     # variaveis """utilizadas para armazenar valores"""
     indice = 0  # indice usado para poder acessar o nome da pessoa que é dona do numero de telefone
