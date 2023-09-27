@@ -1,4 +1,7 @@
-# enviodepesquisa
+Para facilitar a instalação do Python, assista ao vídeo no link fornecido. As instruções passo a passo no vídeo irão guiá-lo através do processo de instalação. Aqui está o link do vídeo para você https://youtu.be/0pG4NrucQR4?si=cFxGdQTEjuVKO0si.
+
+
+
 Este programa é uma ferramenta de automação que permite o envio de mensagens via WhatsApp para números não salvos. O objetivo principal é coletar autorizações de uso de dados por meio de formulários ou enviar convites, entre outros. A mensagem pode incluir o nome da pessoa como uma variável, permitindo a personalização do conteúdo. Além disso, o programa tem a capacidade de enviar mensagens mesmo que o número do destinatário não esteja salvo nos contatos.
 
 
