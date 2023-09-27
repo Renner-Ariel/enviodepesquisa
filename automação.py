@@ -1,3 +1,14 @@
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# Exemplo de uso:
+install('pyautogui')
+install('pyperclip')
+
+
 # importar bibliotecas
 import getpass
 import time
