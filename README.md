@@ -15,9 +15,6 @@ O código pedirá confirmação para abrir os aplicativos. A partir desse moment
 
 OBS: Se o programa estiver apresentando erros, arraste o mouse para um dos quatro cantos da tela (extremidades) e rode o código novamente. Se desejar parar o código, mova o mouse para um dos quatro cantos da tela (extremidades).
 
-Abra o prompt de comando do seu computador.
-Digite pip install pyautogui e pressione Enter para instalar a biblioteca pyautogui.
-Em seguida, digite pip install pyperclip e pressione Enter para instalar a biblioteca pyperclip.
 
 This program is an automation tool that allows sending messages via WhatsApp to unsaved numbers. The main goal is to collect data usage authorizations through forms or send invitations, among others. The message can include the person’s name as a variable, allowing content customization. In addition, the program has the ability to send messages even if the recipient’s number is not saved in the contacts.
 
@@ -32,6 +29,3 @@ The code will ask for confirmation to open applications from this moment do not 
 
 NOTE: If the program is presenting errors drag the mouse to one of the four corners of the screen (extremities) and run the code again if you want to stop the code move the mouse to one of the four corners of the screen (extremities).
 
-Open your computer’s command prompt.
-Type pip install pyautogui and press Enter to install the pyautogui library.
-Then, type pip install pyperclip and press Enter to install the pyperclip library.
