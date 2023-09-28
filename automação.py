@@ -8,6 +8,16 @@ def install(package):
 install('pyautogui')
 install('pyperclip')
 
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# instalação das bibliotecas
+install('pyautogui')
+install('pyperclip')
+
 # importar bibliotecas
 
 
@@ -17,14 +27,14 @@ import getpass
 import time
 import pyautogui
 import pyperclip
-idioma=[ ]
+escolhaidioma=pyautogui.confirm(text='language', buttons=['português', 'english', 'Español'])
 
-if (escolhaidioma:>pyautogui.confirm(text='language', buttons=['português', 'english', 'Español']))== 'português':
+if escolhaidioma== 'português':
     idioma = ['escolha o navegador de preferencia.','outro','insira o nome desse outro navegador--->','vai encaminhar as mensagens acompanhadas do nome da pessoa ??','FUNCIONAMENTO','sim','não','antes do nome','completa',"Insira a sua mensagem ","(digite /n para quebras de linha, porem sem o espaço): ","Insira a sua mensagem depois do nome (digite /n para quebras de linha): ","insira o link da sua pesquisa--->",'insira os nomes --->','insira os numeros--->','abrir os programas é uma parte essencial e pode apresentar erros se não for executado.','PROGRAMAS',"posicione o mouse em cima da barra de mensagens do whatssap e aperte enter em seguida.","foi negada a inicialização dos aplicativos",'Para começar a rodar confirme','CONFIRMAÇÃO','faltam ',' segundos para começar',"TERMINOU","não foi altorizado a rodar o programa","não foi possivel rodar o código pois o quantidade de números e de nomes são diferentes",'chave de segurança invalida','recomendado']
 elif escolhaidioma == 'english':
     idioma = ['choose your preferred browser.','other','insert the name of this other browser--->',"will you forward messages accompanied by the person's name??",'OPERATION','yes',' no','before the name','complete',"Enter your message ","(type /n for line breaks, but without the space): ","Insert your message after the name (type /n for line breaks): ","insert your search link--->",'insert names--->','insert numbers--->','opening programs is an essential part and may present errors if not executed.','PROGRAMS',"position the mouse over the WhatsApp message bar and then press enter.","applications were denied initialization",'To start running, confirm' ,'CONFIRMATION','missing','seconds to start',"FINISHED","was not allowed to run the program","it was not possible to run the code because the number of numbers and names are different",'key security invalid','recommended']
 else:
-    idioma = ['elige tu navegador preferido.','other','ingresa el nombre de este otro navegador--->','¿¿reenviarás mensajes acompañados del nombre de la persona??','OPERATION','yes' ,'no','antes del nombre','completo',"Ingrese su mensaje ","(escriba /n para saltos de línea, pero sin el espacio): ","Inserte su mensaje después del nombre (escriba /n para saltos de línea): ","inserta tu enlace de búsqueda--->",'inserta nombres--->','inserta números--->','abrir programas es una parte esencial y puede presentar errores si no se ejecuta. ','PROGRAMAS',"posicione el mouse sobre la barra de mensajes de WhatsApp y luego presione enter.","se negó la inicialización de las aplicaciones","Para comenzar a ejecutar confirme','CONFIRMACIÓN','faltan','segundos para iniciar', "TERMINADO","no se permitió ejecutar el programa","no fue posible ejecutar el código porque la cantidad de números y nombres son diferentes", 'llave de seguridad no válida','recomendado']
+    idioma = ['elige tu navegador preferido.','other','ingresa el nombre de este otro navegador--->','¿¿reenviarás mensajes acompañados del nombre de la persona??','OPERATION','yes' ,'no','antes del nombre','completo',"Ingrese su mensaje ","(escriba /n para saltos de línea, pero sin el espacio): ","Inserte su mensaje después del nombre (escriba /n para saltos de línea): ","inserta tu enlace de búsqueda--->",'inserta nombres--->','inserta números--->','abrir programas es una parte esencial y puede presentar errores si no se ejecuta. ','PROGRAMAS',"posicione el mouse sobre la barra de mensajes de WhatsApp y luego presione enter.","se negó la inicialización de las aplicaciones",'Para comenzar a ejecutar confirme','CONFIRMACIÓN','faltan','segundos para iniciar', "TERMINADO","no se permitió ejecutar el programa","no fue posible ejecutar el código porque la cantidad de números y nombres son diferentes", 'llave de seguridad no válida','recomendado']
 senha = "" #defina sua senha de segurança para que outras pessoas não acessem/usem o programa de forma a enhviar mensagens aleatorias para pessoas aleatorias
 if input("password  ") == senha:#linhas utilizada para testar se a senha e valida se não for valida retorna a não ativação do codigo e retorna a mensagem da ultima linha
     # variaveis """utilizadas para armazenar valores"""
@@ -32,7 +42,7 @@ if input("password  ") == senha:#linhas utilizada para testar se a senha e valid
     navegador =  pyautogui.confirm(text=idioma[0], title='NAVEGADOR', buttons=[f'chrome({idioma[27]})', 'edge', idioma[1]])
     if navegador == idioma[1]:
         navegador = input(idioma[2])
-    elif navegador == 'chrome(RECOMENDADO)':
+    elif navegador == f'chrome({idioma[27]})':
         navegador = 'chrome'
     funcionamento= pyautogui.confirm(text=idioma[3], title=idioma[4], buttons=[idioma[5],idioma[6]])
     inicial = idioma[7] if funcionamento == idioma[5]  else idioma[8]
@@ -87,7 +97,7 @@ if input("password  ") == senha:#linhas utilizada para testar se a senha e valid
       confirmação_2=pyautogui.confirm(text=idioma[19], title=idioma[20], buttons=[idioma[5], idioma[6]]) #PEDE CONFIRMAÇÃO
       if confirmação_2 == idioma[5]: #caso seja confirmado sera executado o código
           while timer >=1: #timer de inicialização
-              print(idioma[21]+ str(timer) +idioma[22]) #mostra a contagem regressiva
+              print(idioma[21]+' '+ str(timer)+' ' +idioma[22]) #mostra a contagem regressiva
               time.sleep(1) #intervalo de tempo de inicialização
               timer = timer - 1 # redução do tempo remanecente
           pyautogui.keyDown('alt') #deixa tecla alt pressionada
